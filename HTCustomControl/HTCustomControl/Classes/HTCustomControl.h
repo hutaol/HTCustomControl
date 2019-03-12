@@ -15,6 +15,6 @@
 #import "NSDate+HTUtils.h"
 #import "UIImage+HTName.h"
 
-#import "HTpopoverView.h"
+#import "HTPopoverView.h"
 
 #endif /* HTCustomControl_h */
