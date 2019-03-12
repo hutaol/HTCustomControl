@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'HTCustomControl'
-    s.version      = '0.0.1'
+    s.version      = '0.0.2'
     s.summary      = 'A custom control'
     s.homepage     = 'https://github.com/hutaol/HTCustomControl'
     s.license      = 'MIT'

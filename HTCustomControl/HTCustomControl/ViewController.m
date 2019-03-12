@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HTPopoverView.h"
 
 @interface ViewController ()
 
@@ -16,8 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
+
+- (IBAction)bottom:(id)sender {
+    HTPopoverView *pop = [HTPopoverView new];
+    pop.mode = HTPopoverViewModeBottom;
+    pop.contentHeight = 400;
+    [pop show];
+}
+
+- (IBAction)center:(id)sender {
+    HTPopoverView *pop = [HTPopoverView new];
+    pop.mode = HTPopoverViewModeCenter;
+    [pop show];
+}
+
+
 
 
 @end
