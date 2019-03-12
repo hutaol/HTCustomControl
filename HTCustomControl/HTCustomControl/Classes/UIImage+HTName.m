@@ -39,19 +39,19 @@
 }
 
 #pragma mark ------------ Private Methods -------------
-- (NSBundle *)getBundleWithName:(NSString *)bundleName {
++ (NSBundle *)getBundleWithName:(NSString *)bundleName {
     NSString *pathComponent = [NSString stringWithFormat:@"%@.bundle", bundleName];
     NSString *bundlePath =[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:pathComponent];
     NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
     return bundle;
 }
 
-- (NSString *)stringByAppendingString:(NSString *)str scale:(CGFloat)scale  {
++ (NSString *)stringByAppendingString:(NSString *)str scale:(CGFloat)scale  {
     if (fabs(scale - 1) <= __FLT_EPSILON__ || str.length == 0 || [str hasSuffix:@"/"]) return self.copy;
     return [str stringByAppendingFormat:@"@%@x", @(scale)];
 }
 
-- (NSArray *)getScaleArray {
++ (NSArray *)getScaleArray {
     NSArray *scales;
     CGFloat screenScale = [UIScreen mainScreen].scale;
     if (screenScale <= 1) {
